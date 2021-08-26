@@ -34,7 +34,7 @@ jobs:
       - name: West Zephyr export
         run: west zephyr-export
       - name: West Build (ErgoTravel Left)
-        run: west build -s zmk/app -b nice_nano_v2 -- -DSHIELD=ergotravel_left -DZMK_CONFIG="${GITHUB_WORKSPACE}/config"
+        run: west build --pristine -s zmk/app -b nice_nano_v2 -- -DSHIELD=ergotravel_left -DZMK_CONFIG="${GITHUB_WORKSPACE}/config"
       - name: ErgoTravel DTS File
         if: ${{ always() }}
         run: cat -n build/zephyr/nice_nano_v2.dts.pre.tmp
