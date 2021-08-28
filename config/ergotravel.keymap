@@ -3,15 +3,6 @@
 #include <dt-bindings/zmk/bt.h>
 
 / {
-    combos {
-        compatible = "zmk,combos";
-        combo_arrow {
-            timeout-ms = <50>;
-            key-positions= <6 6>;
-            bindings = <&kp LPAR &kp RPAR &kp SPACE &kp EQUAL &kp GT &kp SPACE &kp LBKT &kp RBKT &kp LEFT>;
-        };
-    };
-
     keymap {
         compatible = "zmk,keymap";
 
